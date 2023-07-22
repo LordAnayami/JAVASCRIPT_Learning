@@ -884,3 +884,478 @@ const testObj = {
 // Only change code below this line
 const hatValue = testObj.hat;      // Change this line
 const shirtValue = testObj.shirt;    // Change this line
+
+
+
+// Setup
+const testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+// Only change code below this line
+const entreeValue = testObj["an entree"];   // Change this line
+const drinkValue = testObj["the drink"];    // Change this line
+
+
+
+// Setup
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line
+const playerNumber = 16;  // Change this line
+const player = testObj[playerNumber];   // Change this line
+
+
+
+// Setup
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line
+myDog.name="Happy Coder";
+
+
+
+  const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.bark="woof";
+
+
+
+// Setup
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line
+delete myDog.tails;
+
+
+
+// Setup
+function phoneticLookup(val) {
+  let result = "";
+
+  // Only change code below this line
+  switch(val) {
+    case "alpha":
+      result = "Adams";
+      break;
+    case "bravo":
+      result = "Boston";
+      break;
+    case "charlie":
+      result = "Chicago";
+      break;
+    case "delta":
+      result = "Denver";
+      break;
+    case "echo":
+      result = "Easy";
+      break;
+    case "foxtrot":
+      result = "Frank";
+  }
+
+  // Only change code above this line
+  return result;
+}
+
+phoneticLookup("charlie");
+
+// Setup
+function phoneticLookup(val) {
+  let result = "";
+
+  // Only change code below this line
+  const lookup = {
+    "alpha":"Adams",
+    "bravo":"Boston",
+    "charlie":"Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank"
+  }
+
+  
+   result=lookup[val];
+
+  // Only change code above this line
+  return result;
+}
+
+phoneticLookup("charlie");
+
+
+
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  var result="";
+  if (obj.hasOwnProperty(checkProp)){result=obj[checkProp];}
+  else{result="Not Found"}
+  return result;
+  // Only change code above this line
+}
+
+
+
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    "artist": "The Gazette",
+    "title": "Taion",
+    "release_year": 2006,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  }
+];
+
+
+
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
+
+
+
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+const secondTree = myPlants[1].list[1];
+
+
+
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (value == ""){delete records[id][prop];}
+  else if (prop!="tracks" && value != ""){records[id][prop]=value;}
+  else if (prop=="tracks" && value != ""){
+    records[id].tracks=records[id][prop] || [];
+    records[id].tracks.push(value);
+  }
+  
+  return records;
+}
+
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+
+
+// Setup
+const myArray = [];
+
+// Only change code below this line
+let i = 5;
+
+while (i >=0) {
+  myArray.push(i);
+  i--;
+}
+
+
+
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for (let i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+
+
+
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for (var i = 1; i < 10; i += 2) {
+  myArray.push(i);
+}
+
+
+
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for (var i = 9; i >0; i -= 2) {
+  myArray.push(i);
+}
+
+
+
+// Setup
+const myArr = [2, 3, 4, 5, 6];
+
+// Only change code below this line
+var total = 0;
+for (let i = 0; i < myArr.length; i++) {
+   total+=myArr[i];
+}
+
+
+function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    product*=arr[i][j];
+    console.log(product);
+  }
+}
+
+  // Only change code above this line
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+
+
+// Setup
+const myArray = [];
+let i = 10;
+
+// Only change code below this line
+do {
+  myArray.push(i);
+  i++;
+}while (i < 10)
+
+
+function sum(arr, n) {
+  // Only change code below this line
+ 
+  if (n<=0)
+  {
+    return 0;
+  }
+  else{
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+  // Only change code above this line
+}
+
+
+
+
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  for (let x = 0; x < contacts.length; x++) {
+    if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) {
+        return contacts[x][prop];
+      } else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+}
+
+lookUpProfile("Akira", "likes");
+
+
+
+
+function randomFraction() {
+
+  // Only change code below this line
+
+  return Math.random();
+
+  // Only change code above this line
+}
+
+
+
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);;
+}
+
+
+
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+
+
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger("56");
+
+
+
+function convertToInteger(str) {
+  return parseInt(str,2);
+}
+
+convertToInteger("10011");
+
+
+
+function checkEqual(a, b) {
+  return a==b ? "Equal" : "Not Equal";
+}
+
+checkEqual(1, 2);
+
+
+
+function checkSign(num) {
+ return (num>0) ? "positive"
+ : (num<0) ? "negative"
+ :"zero";
+}
+
+checkSign(10);
+
+
+
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countup(5));
+
+
+
+// Only change code below this line
+function countdown(n){
+  if (n<1) {return [];}
+  else {
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
+   }
+  
+}
+// Only change code above this line
+
+
+
+function rangeOfNumbers(startNum, endNum) {
+  
+
+   if (endNum < startNum) {return [];}
+  else {
+    const countArray = rangeOfNumbers(startNum, endNum - 1);
+    countArray.push(endNum);
+    return countArray;
+   }
+};
