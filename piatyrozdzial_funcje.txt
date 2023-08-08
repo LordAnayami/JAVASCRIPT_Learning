@@ -1,0 +1,259 @@
+function convertCtoF(celsius) {
+  let fahrenheit = celsius*9/5+32;
+  return fahrenheit;
+}
+
+convertCtoF(30);
+
+
+
+function reverseString(str) {
+    let string = "";
+    for (let i=str.length-1; i>=0; i--){
+      string = string + str[i];
+      console.log(string);
+    }
+    str = string;
+    return str;
+  }
+  
+  reverseString("hello");
+
+
+
+  function factorialize(num) {
+  let x =1;
+  for (let i= 1; i<=num; i++){
+    x=x*i;
+  }
+  return num = x;
+}
+
+factorialize(5);
+
+
+
+function findLongestWordLength(str) {
+  let words = str.split(' ');
+  let maxLength = 0;
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > maxLength) {
+      maxLength = words[i].length;
+    }
+  }
+
+  return maxLength;
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+
+function largestOfFour(arr) {
+  let nowy = [];
+  let max = 0;
+  for (let i=0; i<arr.length; i++){
+    for (let j=0; j<arr[i].length; j++){
+      if (j==0) {max = arr[i][j];}
+      console.log(arr[i][j] + "a");
+      console.log(max);
+      if (max < arr[i][j] && j>0){ max = arr[i][j]; console.log(max);}
+  }
+  nowy.push(max);
+  console.log(nowy);
+  }
+  return arr = nowy;
+}
+
+largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])
+
+
+
+function confirmEnding(str, target) {
+  let x = true;
+  for (let i = 0; i<target.length; i++){
+    let e = str.length - 1 - i;
+    console.log(e);
+    let f = target.length - 1 - i;
+    console.log(f);
+    if (str[e] !== target[f]){x = false;}
+    console.log(str[e]);
+    console.log(target[f]);
+
+  }
+  return str = x;
+}
+
+confirmEnding("Bastian", "n");
+
+
+
+function repeatStringNumTimes(str, num) {
+  let x = "";
+  if (num > 0){
+    for (let i=0; i<num; i++){
+      x = x+str;
+    }
+  }
+  return str = x;
+}
+
+repeatStringNumTimes("abc", 3);
+
+
+
+function truncateString(str, num) {
+  let x ="";
+  if (str.length > num){
+    for (let i = 0; i<num; i++){
+      x += str[i];
+      console.log(x);
+    }
+    x += "...";
+    console.log(x);
+    str = x;
+  }
+  return str;
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+
+
+function findElement(arr, func) {
+  let num = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    num = arr[i];
+    if (func(num)) {
+      return num;
+    }
+  }
+
+  return undefined;
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+
+
+function booWho(bool) {
+  if (bool === true | bool === false){
+    return true;
+  }
+  return false;
+}
+
+booWho(null);
+
+
+
+function titleCase(str) {
+  let x = str.split(" ");
+  str = "";
+  let w="a";
+  console.log(x);
+  for (let i =0; i<x.length; i++){
+    for (let j =0; j<x[i].length; j++){
+    if (j==0){w = x[i][j].toUpperCase(); console.log(w);}
+    if (j>0){w = x[i][j].toLowerCase(); console.log(w);}
+    str+=w;
+    console.log(str);
+  }
+  str+=" "
+  }
+
+  return str;
+}
+
+titleCase("I'm a little tea pot");
+
+function titleCase(str) {
+  const newTitle = str.split(" ");
+  const updatedTitle = [];
+  for (let st in newTitle) {
+    updatedTitle[st] = newTitle[st][0].toUpperCase() + newTitle[st].slice(1).toLowerCase();
+  }
+  return updatedTitle.join(" ");
+}
+
+titleCase("I'm a little tea pot");
+
+
+
+function frankenSplice(arr1, arr2, n) {
+  let x = [];
+  for (let i = 0; i< arr2.length; i++){
+    if (i == n){ x.push(...arr1);}
+    x.push(arr2[i]);
+    console.log(x);
+  }
+  if (arr2.length == 0) {x.push(...arr1)}
+  return x;
+}
+
+frankenSplice([1, 2, 3, 4], [], 0) 
+
+
+
+function bouncer(arr) {
+  let x = [];
+  for (let i=0; i<arr.length; i++){
+    if (arr[i]>0 && typeof (arr[i]) === 'number') { x.push(arr[i]);  }
+    if (arr[i]!="" && typeof (arr[i]) === 'string') { x.push(arr[i]);  }
+  console.log(x);
+}
+return x;
+}
+bouncer([false, null, 0, NaN, undefined, ""])
+
+
+
+function getIndexToIns(arr, num) {
+  let x = arr.sort((a, b) => a - b);
+  if(arr.length==0){return 0;}
+  for (let i=0; i<x.length; i++){
+    console.log(i + "" + x[i]);
+    if (x[i]>=num){console.log(i); return i; }
+   
+  }
+   if (x[x.length-1]<num){console.log(x.length); return x.length;}
+}
+
+getIndexToIns([2, 5, 10], 15)
+
+
+
+function mutation(arr) {
+let z = 0;
+let pierwszy = arr[0].toLowerCase();
+let drugi = arr[1].toLowerCase();
+  for (let i=0; i<drugi.length; i++){
+     for (let j=0; j<pierwszy.length; j++){
+    console.log(pierwszy[j] + drugi[i]);
+    if (pierwszy[j] == drugi[i]){z++; j=pierwszy.length;} 
+  }
+  }
+  console.log(z+"" + drugi.length);
+  if (z == drugi.length) {return true;}
+  else {return false;}
+}
+
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])
+
+
+
+function chunkArrayInGroups(arr, size) {
+  let x = [];
+  let y = [];
+  for (let i = 0; i<arr.length; i++){
+    if ((i+1) % size !== 0 ){x.push(arr[i]);}
+    if ((i+1) % size === 0 ){x.push(arr[i]); y.push([...x]);x=[];} 
+    if ((i+1) % size !== 0 && i==arr.length-1){y.push([...x])}
+    console.log(x);
+    console.log(y);
+  }
+  return y;
+}
+
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) 
