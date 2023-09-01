@@ -1,10 +1,82 @@
-// Variables
+// Variables for buttons
 
-let accordion = document.getElementsByClassName('content-container');
+const startStopBtn = document.querySelector('#startStopBtn');
+const reset = document.querySelector('#resetBtn');
 
-for (let i = 0; i < accordion.length; i++  ){
-    accordion[i].addEventListener('click', function(){
-    
-        this.classList.toggle('active');
-    });
-};
+// Variables for time valuse
+
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+
+// Variables for leading zero
+let leadingSeconds = 0;
+let leadingMinutes = 0;
+let leadingHours = 0;
+
+// Variable for set interval & timerstatus
+let timerInterval = null;
+let timerStatus = "stopped";
+
+
+//Stop Watch Function
+
+function stopWatch(){
+    seconds++;
+    if (seconds/60 ===1){
+        seconds = 0;
+        minutes++;
+        if (minutes/60 ===1){
+            minutes = 0;
+            hours++;
+        }
+    }
+
+    if (seconds <10){
+        leadingSeconds = "0" + seconds.toString();
+    }else{
+        leadingSeconds = seconds
+    }
+    if (minutes <10){
+        leadingMinutes = "0" + minutes.toString();
+    }else{
+        leadingMinutes = seconds
+    }
+    if (hours <10){
+        leadingHours = "0" + hours.toString();
+    }else{
+        leadingHours = seconds
+    }
+
+    let displayTimer = document.getElementById('timer').innerText = leadingHours + ":" + leadingMinutes + ":" + leadingSeconds;
+}
+
+// window.setInterval(stopWatch, 1000)
+
+startStopBtn.addEventListener('click',function (){
+    if(timerStatus === "stopped"){
+       timerInterval = window.setInterval(stopWatch, 1000);
+       document.getElementById('startStopBtn').innerHTML = '<i class="fa-solid fa-pause" id="pause"></i>';
+       timerStatus = "started"
+    }
+    else{
+        window.clearInterval(timerInterval);
+        document.getElementById('startStopBtn').innerHTML = '<i class="fa-solid fa-play" id="play"></i>';
+       timerStatus = "stopped"
+    }
+}); 
+
+resetBtn.addEventListener('click',function (){
+    window.clearInterval(timerInterval);
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+
+    document.getElementById('timer').innerHTML = "00:00:00";
+
+
+    //little fix for project so when reset is clicked when timer is working to reset all and do not let pause button be still and timerStatus be wrong
+    document.getElementById('startStopBtn').innerHTML = '<i class="fa-solid fa-play" id="play"></i>';
+    timerStatus = "stopped"
+
+});
