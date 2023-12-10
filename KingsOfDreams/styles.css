@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aquamarine;
+ }
+
+header {
+    width: 100%;
+    height: 20%;
+    align-items: center;
+
+}
+div{
+    border:solid 2px #000;
+    display:flex;
+    width: 100%;
+    height: 80%;
+}
+
+.links {
+    width: 10%;
+    height: 100%; /* na przykład 100px, zamiast 100% */
+    text-align: center;
+    border: solid 2px #000;
+    margin: auto; /* dodanie marginesu auto spowoduje wyśrodkowanie elementu w poziomie */
+    display: flex; /* zmiana na display: flex, aby wyśrodkować tylko w poziomie */
+    flex-direction: column; /* ustawienie flex-direction na column, aby elementy wyświetlały się jeden pod drugim */
+}
+
+.links p {
+    margin: 10px 0; /* dodajemy odstępy między poszczególnymi linkami */
+}
+
+.inside{
+    height:100%;
+    width:90%;
+    align-items: center;
+    border:solid 2px #000;
+    text-align: center;
+    padding: 20px;
+
+}
+
+table{
+    border:solid 2px #FFF;
+    width: calc(100% - 5px); /* Szerokość tabeli będzie równa 100% szerokości obiektu nadrzędnego minus 20px paddingu */
+    padding: 10px; /* Ustawienie paddingu dla tabeli */
+    position: relative;
+    border-collapse: collapse; /* Usunięcie odstępów między komórkami */
+    box-shadow: 5px 5px 5px #888888; /* Dodanie cienia */
+    border-radius: 10px; /* Zaokrąglenie krawędzi */
+}
+
+th, td {
+    border: solid 1px #FFF;
+    text-align: center;
+    padding: 10px; /* Dodanie wewnętrznego marginesu */
+}
+
+/* Ustawienie szerokości kolumn */
+th:nth-child(-n+3),
+td:nth-child(-n+3) {
+    width: 20%; /* Równomierne proporcje dla pierwszych trzech kolumn */
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 40%; /* Ostatnia kolumna zajmuje 40% szerokości */
+}
+
+a:link {
+    color: blue; /* Kolor linku w stanie domyślnym */
+}
+
+a:visited {
+    color: blue; /* Kolor linku po odwiedzeniu */
+}
+
+a:hover {
+    color: red; /* Kolor linku po najechaniu kursorem */
+}
+
+a:active {
+    color: green; /* Kolor linku po naciśnięciu */
+}
