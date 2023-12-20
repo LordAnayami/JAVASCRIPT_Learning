@@ -1,0 +1,623 @@
+///sum of arr[min,max]
+function sumAll(arr) {
+  let sum=0;
+  let min=arr[0];
+  let max=arr[1];
+  if(min<max){
+    for(let i=min; i<max+1; i++){
+    sum+=i;
+    }
+  }
+  else{
+    for(let i=max; i<min+1; i++){
+    sum+=i;
+    }
+  }
+  return sum;
+}
+
+sumAll([4, 1])
+
+//or
+function sumAll(arr) {
+    let max = Math.max(arr[0], arr[1]);
+    let min = Math.min(arr[0], arr[1]);
+    let sumBetween = 0;
+    for (let i = min; i <= max; i++) {
+      sumBetween += i;
+    }
+    return sumBetween;
+  }
+  sumAll([1, 4]);
+
+
+///Diff Two Arrays
+function diffArray(arr1, arr2) {
+  let newArr = [];
+  let sumArr = [...arr1, ...arr2];
+  for(let i=0; i<sumArr.length; i++){
+    if (arr1.indexOf(sumArr[i])==-1 || arr2.indexOf(sumArr[i])==-1 ){
+      newArr.push(sumArr[i]);
+    }
+  }
+  return newArr;
+}
+
+diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+
+
+
+////Seek and Destroy
+function destroyer(arr, ...valsToRemove) {
+  return arr.filter(elem => !valsToRemove.includes(elem));
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
+
+/////Wherefore art thou - return items where keys + values in first object == in second object
+function whatIsInAName(collection, source) {
+  return collection.filter(item => {
+    for (let key in source) {
+      if (item[key] !== source[key]) {
+        return false;
+      }
+    }
+    return true;
+  });
+}
+
+whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 })
+
+
+
+////Spinal Tap Case - return part of url with - and splited words
+function spinalCase(str) {
+  let newStr = str.replace(/([A-Z])/g, ' $1').trim().split(/,|-|\.|_| /).filter(item => item!=="").join("-").toLowerCase();
+  return newStr;
+}
+
+spinalCase('This Is Spinal Tap');
+//spinalCase("Teletubbies say Eh-oh") should return the string teletubbies-say-eh-oh.
+
+
+///Pig Latin
+function translatePigLatin(str) {
+  let newStr = "";
+  let add = "";
+  if (str[0]==="a" || str[0]==="A" || str[0]==="e" || str[0]==="E" || str[0]==="i" || str[0]==="I" || str[0]==="o" || str[0]==="O" || str[0]==="u" || str[0]==="U"){
+    newStr += str;
+    newStr +="way";
+  }
+  else{
+    for (let i = 0; i<str.length; i++){
+      if (str[i]==="a" || str[i]==="A" || str[i]==="e" || str[i]==="E" || str[i]==="i" || str[i]==="I" || str[i]==="o" || str[i]==="O" || str[i]==="u" || str[i]==="U"){
+        newStr = str.slice(i);
+        break;
+      }
+    else{
+      add+=str[i];
+    }
+    }
+    newStr+=add+"ay";
+  }
+  console.log(newStr)
+  return newStr;
+}
+
+translatePigLatin("california"); //aliforniacay
+
+//translatePigLatin("glove"); // oveglay
+//translatePigLatin("algorithm") should return the string algorithmway.
+
+// or 
+function translatePigLatin(str) {
+  let consonantRegex = /^[^aeiou]+/;
+  let myConsonants = str.match(consonantRegex);
+  return myConsonants !== null
+    ? str
+        .replace(consonantRegex, "")
+        .concat(myConsonants)
+        .concat("ay")
+    : str.concat("way");
+}
+
+translatePigLatin("consonant");
+
+
+////Search and Replace
+function myReplace(str, before, after) {
+  let split = str.split(/ /);
+  let index = split.indexOf(before);
+  let char1 = split[index][0].toUpperCase();
+  let char2 = "";
+  if(split[index][0] === char1){
+    char2 += after[0].toUpperCase() +  after.slice(1);
+  }
+  else {
+    char2 += after[0].toLowerCase() +  after.slice(1);
+  }
+  split[index] = char2;
+  console.log(split.join(" "))
+  return split.join(" ");
+}
+
+myReplace("I think we should look up there", "up", "Down");
+
+
+
+///DNA Pairing
+function pairElement(str) {
+  let DNA = [];
+  for (let i = 0; i<str.length; i++){
+    switch(str[i]){
+      case "A":
+        DNA.push(["A", "T"]);
+        break;
+      case "T":
+        DNA.push(["T", "A"]);
+        break;
+      case "G":
+        DNA.push(["G", "C"]);
+        break;
+      case "C":
+        DNA.push(["C", "G"]);
+        break;
+    }
+  }
+  return DNA;
+}
+
+pairElement("GCG");
+
+
+//or 
+
+function pairElement(str) {
+  // create object for pair lookup
+  const pairs = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C"
+  };
+
+  // map character to array of character and matching pair
+  return str
+    .split("")
+    .map(x => [x, pairs[x]]);
+}
+
+// test here
+pairElement("GCG");
+
+
+
+////Missing letters
+function fearNotLetter(str) {
+  if (str.length === 26) return undefined;
+  let alfabeth = "abcdefghijklmnopqrstuvwxyz";
+  let missing = ""
+  let charInAlfa = alfabeth.indexOf(str[0]);
+  let lastCharInAlfa = alfabeth.indexOf(str[str.length - 1]);
+  let j = 0;
+  for (let i = charInAlfa; i<lastCharInAlfa+1; i++){
+    if (alfabeth[i] == str[j]) j++;
+    else missing += alfabeth[i]
+  }
+  return missing;
+}
+
+fearNotLetter("abcdefghijklmnopqrstuvwxyz");
+
+
+///or 
+function fearNotLetter(str) {
+  for (let i = 0; i < str.length; i++) {
+    /* code of current character */
+    const charCode = str.charCodeAt(i);
+
+    /* if code of current character is not equal to first character + no of iteration
+        then a letter was skipped */
+    if (charCode !== str.charCodeAt(0) + i) {
+      /* if current character skipped past a character find previous character and return */
+      return String.fromCharCode(charCode - 1);
+    }
+  }
+  return undefined;
+}
+
+// test here
+fearNotLetter("abce");
+
+
+
+
+/////Sorted Union
+function uniteUnique(...arr) {
+  const values = Object.entries(arr).map(entry => entry[1]); 
+  const flattenedArray = [].concat(...values);
+  let results = [];
+  for (let i = 0; i<flattenedArray.length; i++){
+    if (i == flattenedArray.indexOf(flattenedArray[i])) results.push(flattenedArray[i]);
+  }
+  return results;
+}
+
+uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1]);
+
+
+
+///or 
+
+function uniteUnique() {
+  return [...arguments]
+    .flat()
+    .filter((item, ind, arr) => arr.indexOf(item) === ind);
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+
+
+/////Convert HTML Entities
+function convertHTML(str) {
+  let results = "";
+  for (let i = 0; i<str.length; i++){
+    switch(str[i]){
+      case "&":
+        results += "&amp;"
+        break;
+      case "<":
+        results += "&lt;"
+        break;
+      case ">":
+        results += "&gt;"
+        break;
+      case "'":
+        results += "&apos;"
+        break;
+      case '"':
+        results += "&quot;"
+        break;
+      default:
+        results += str[i];
+        break;
+    }
+  }
+  return results;
+}
+
+convertHTML("Dolce & Gabbana");
+
+
+
+//or 
+function convertHTML(str) {
+  return str.split("").map(char => {
+    switch (char) {
+      case "&":
+        return "&amp;";
+      case "<":
+        return "&lt;";
+      case ">":
+        return "&gt;";
+      case "'":
+        return "&apos;";
+      case '"':
+        return "&quot;";
+      default:
+        return char;
+    }
+  }).join("");
+}
+
+convertHTML("Dolce & Gabbana");
+
+
+
+/////Sum All Odd Fibonacci Numbers
+function sumFibs(num) {
+  let prevNumber = 0;
+  let currNumber = 1;
+  let result = 0;
+  while (currNumber <= num) {
+    if (currNumber % 2 !== 0) {
+      result += currNumber;
+    }
+    currNumber += prevNumber;
+    prevNumber = currNumber - prevNumber;
+  }
+
+  return result;
+}
+
+// test here
+sumFibs(75025) ///should return 135721.
+function sumPrimes(num) {
+  var x=2;
+  var added=2;
+  while (x<num) {
+    x++;
+    for (var i=2;i<x;i++){
+      if (x%i===0){
+        break;
+      }
+      else if (i===x-1) {
+        added+=x;}
+      }
+   }
+  return added;
+}
+
+sumPrimes(10);
+
+
+///or 
+function sumPrimes(num) {
+  // Helper function to check primality
+  function isPrime(num) {
+    const sqrt = Math.sqrt(num);
+    for (let i = 2; i <= sqrt; i++) {
+      if (num % i === 0)
+        return false;
+    }
+    return true;
+  }
+
+  // Check all numbers for primality
+  let sum = 0;
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i))
+      sum += i;
+  }
+  return sum;
+}
+
+
+
+
+/////Smallest Common Multiple
+function smallestCommons(arr) {
+  arr.sort(function(a, b) {
+    return a - b;
+  });
+  var multiple = arr[0]*arr[1];
+  var validator = false;
+  var howManyIsOk = 0;
+  while(!validator){
+    multiple+=arr[1];
+    for(let i = arr[0]; i<arr[1]; i++){
+      if (multiple%i==0) howManyIsOk+=1;
+      console.log(multiple + " " + i +  " " + howManyIsOk);
+    }
+    if (howManyIsOk == arr[1]-arr[0]) validator = true;
+    else howManyIsOk = 0;
+  }
+
+  return multiple;
+}
+smallestCommons([1, 13])
+
+
+//or 
+function smallestCommons(arr) {
+  // Setup
+  const [min, max] = arr.sort((a, b) => a - b);
+  const numberDivisors = max - min + 1;
+  // Largest possible value for SCM
+  let upperBound = 1;
+  for (let i = min; i <= max; i++) {
+    upperBound *= i;
+  }
+  // Test all multiples of 'max'
+  for (let multiple = max; multiple <= upperBound; multiple += max) {
+    // Check if every value in range divides 'multiple'
+    let divisorCount = 0;
+    for (let i = min; i <= max; i++) {
+      // Count divisors
+      if (multiple % i === 0) {
+        divisorCount += 1;
+      }
+    }
+    if (divisorCount === numberDivisors) {
+      return multiple;
+    }
+  }
+}
+
+smallestCommons([1, 5]);
+
+
+
+///Drop it
+function dropElements(arr, func) {
+  while(arr.length>0 && !func(arr[0])){
+    arr.shift();
+  }
+  console.log(arr)
+  return arr;
+}
+
+dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;})
+
+
+///Steamroller
+function steamrollArray(arr) {
+  const flatterArr = [];
+  for (let i = 0; i<arr.length; i++){
+    if (Array.isArray(arr[i])){
+      flatterArr.push(...steamrollArray(arr[i])) 
+    }
+    else flatterArr.push(arr[i]);
+  }
+  return flatterArr;
+}
+steamrollArray([1, {}, [3, [[4]]]])
+
+
+
+///Binary Agents
+function binaryAgent(str) {
+  var binaryArr = str.split(" ");
+  var newString = "";
+
+  for (let i=0; i<binaryArr.length; i++){
+    let decimalChar = parseInt(binaryArr[i], 2);
+    newString += String.fromCharCode(decimalChar);
+    console.log(newString);
+  }
+  return newString;
+}
+
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+
+
+////Everything Be True
+function truthCheck(collection, pre) {
+  var isTrue = true;
+  var filtered = collection.map(item => ({ pre: item[pre] }));
+  console.log(filtered)
+  if ((pre === "users" || pre === "data") && filtered.length>0) {
+    return true;
+  }
+  for (let i = 0; i < filtered.length; i++) {
+    console.log(filtered[i].pre)
+    if (pre == "number" && isNaN(filtered[i].pre)){
+      isTrue = false;
+      break;
+    }
+    if (filtered[i].pre == null || filtered[i].pre == 0 || filtered[i].pre === '') {
+      isTrue = false;
+      break;
+    }
+  }
+  console.log(isTrue);
+  return isTrue;
+}
+
+truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "name");
+
+/*
+truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot") should return false.
+Passed:truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "name") should return true.
+Passed:truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "role") should return false.
+Passed:truthCheck([{name: "Pikachu", number: 25, caught: 3}, {name: "Togepi", number: 175, caught: 1}], "number") should return true.
+Passed:truthCheck([{name: "Pikachu", number: 25, caught: 3}, {name: "Togepi", number: 175, caught: 1}, {name: "MissingNo", number: NaN, caught: 0}], "caught") should return false.
+Passed:truthCheck([{name: "Pikachu", number: 25, caught: 3}, {name: "Togepi", number: 175, caught: 1}, {name: "MissingNo", number: NaN, caught: 0}], "number") should return false.
+Passed:truthCheck([{name: "Quincy", username: "QuincyLarson"}, {name: "Naomi", username: "nhcarrigan"}, {name: "Camperbot"}], "username") should return false.
+Passed:truthCheck([{name: "freeCodeCamp", users: [{name: "Quincy"}, {name: "Naomi"}]}, {name: "Code Radio", users: [{name: "Camperbot"}]}, {name: "", users: []}], "users") should return true.
+Passed:truthCheck([{id: 1, data: {url: "https://freecodecamp.org", name: "freeCodeCamp"}}, {id: 2, data: {url: "https://coderadio.freecodecamp.org/", name: "CodeRadio"}}, {id: null, data: {}}], "data") should return true.
+Passed:truthCheck([{id: 1, data: {url: "https://freecodecamp.org", name: "freeCodeCamp"}}, {id: 2, data: {url: "https://coderadio.freecodecamp.org/", name: "CodeRadio"}}, {id: null, data: {}}], "id") should return false.
+*/
+
+
+function truthCheck(collection, pre) {
+  return collection.every(function (element) {
+    return element.hasOwnProperty(pre) && Boolean(element[pre]);
+  });
+}
+
+truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot");
+
+function truthCheck(collection, pre) {
+  // Is everyone being true?
+  return collection.every(obj => obj[pre]);
+}
+
+truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot");
+
+
+
+////Arguments Optional
+function addTogether(x, y) {
+  if (typeof x !== 'number'){
+    return undefined;
+  }
+  if (arguments.length > 1){
+   if (typeof  y === 'number'){
+     return x + y;
+   }else return undefined;
+  }else{
+    return function(y){
+      console.log(y)
+     if (typeof  y === 'number'){
+     return x + y;
+      }else return undefined;
+    }
+  }
+}
+addTogether(5)(7)
+
+
+/// or 
+function addTogether() {
+  const [first, second] = arguments;
+
+  if (typeof (first) === "number") {
+    if (typeof (second) === "number") return first + second;
+    if (arguments.length === 1) return (second) => addTogether(first, second);
+  }
+}
+
+
+
+////Make a Person
+const Person = function(first, last) {
+  let firstName = first;
+  let lastName  = last;
+
+  this.getFirstName = function() {
+    return firstName;
+  };
+
+  this.getLastName = function() {
+    return lastName;
+  };
+
+  this.getFullName = function() {
+    return this.getFirstName() + " " + this.getLastName();
+  };
+
+  this.setFirstName = function(first) {
+    return firstName = first;
+  };
+
+  this.setLastName = function(last) {
+    return lastName = last;
+  };
+
+  this.setFullName = function(first, last) {
+    this.setFirstName(first);
+    this.setLastName(last);
+    return this.getFullName();
+  };
+};
+
+
+
+///Map the Debris
+function orbitalPeriod(arr) {
+  const GM = 398600.4418;
+  const earthRadius = 6367.4447;
+  const a = 2 * Math.PI;
+  const newArr = [];
+
+  const getOrbPeriod = function(obj) {
+    const c = Math.pow(earthRadius + obj.avgAlt, 3);
+    const b = Math.sqrt(c / GM);
+    const orbPeriod = Math.round(a * b);
+    // create new object
+    return {name: obj.name, orbitalPeriod: orbPeriod};
+  };
+
+  for (let elem in arr) {
+    newArr.push(getOrbPeriod(arr[elem]));
+  }
+
+  return newArr;
+}
+
+// test here
+orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]);
