@@ -1,0 +1,15 @@
+body{
+   background-color:#d8bfd8;
+   color:#006400;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ button{
+    color:#060486;
+ }
+ 
+ #output p {
+   color: brown;
+ }
