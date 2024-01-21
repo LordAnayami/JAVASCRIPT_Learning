@@ -39,7 +39,7 @@ div{
     border:solid 2px #000;
     text-align: center;
     padding: 20px;
-
+    overflow: auto;
 }
 
 table{
