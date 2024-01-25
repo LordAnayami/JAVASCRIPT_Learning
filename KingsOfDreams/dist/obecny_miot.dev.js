@@ -1,54 +1,89 @@
 "use strict";
 
-var tableParents = document.getElementsByClassName("table-parents");
-var tableChild = document.getElementsByClassName("table-children");
-var parentsCG = {
-  male: {
-    name: "Mignon",
-    img: "./img/Mignon.jpg",
-    hair: "white",
-    title: "XX,YY,ZZ"
+var table = document.getElementById("table");
+var allMiots = {
+  miot1: {
+    name: "2010 A Chinese Crested",
+    parents: {
+      male: {
+        name: "Mignon",
+        img: "./img/Mignon.jpg",
+        hair: "white",
+        title: "XX,YY,ZZ"
+      },
+      female: {
+        name: "Sissi",
+        img: "./img/Sissi.jpg",
+        hair: "black",
+        title: "XX,YY,ZZ"
+      }
+    },
+    puppies: {
+      puppy1: {
+        name: "XAX",
+        img: "./img/Mignon.jpg",
+        hair: "white",
+        sold: "Sprzedany"
+      },
+      puppy2: {
+        name: "CAS",
+        img: "./img/Sissi.jpg",
+        hair: "black",
+        sold: "Wolny"
+      }
+    }
   },
-  female: {
-    name: "Sissi",
-    img: "./img/Sissi.jpg",
-    hair: "black",
-    title: "XX,YY,ZZ"
+  miot2: {
+    name: "2011 B Chinese Crested",
+    parents: {
+      male: {
+        name: "Mignon2",
+        img: "./img/Mignon.jpg",
+        hair: "white",
+        title: "XX,YY,ZZ"
+      },
+      female: {
+        name: "Sissi2",
+        img: "./img/Sissi.jpg",
+        hair: "black",
+        title: "XX,YY,ZZ"
+      }
+    },
+    puppies: {
+      puppy1: {
+        name: "XAX2",
+        img: "./img/Mignon.jpg",
+        hair: "white",
+        sold: "Sprzedany"
+      },
+      puppy2: {
+        name: "CAS2",
+        img: "./img/Sissi.jpg",
+        hair: "black",
+        sold: "Wolny"
+      }
+    }
   }
 };
-var puppyCG = {
-  puppy1: {
-    name: "XAX",
-    img: "./img/Mignon.jpg",
-    hair: "white",
-    sold: "Sprzedany"
-  },
-  puppy2: {
-    name: "CAS",
-    img: "./img/Sissi.jpg",
-    hair: "black",
-    sold: "Wolny"
-  }
-};
 
-var fillParent = function fillParent() {
-  var string = "\n        <tr> \n            <th>Pies</th>\n            <th>Suka</th>\n        </tr>\n        <tr>\n            <td>".concat(parentsCG.male.name, "</td>\n            <td>").concat(parentsCG.female.name, "</td>\n        </tr>\n        <tr>\n            <td><img src=\"").concat(parentsCG.male.img, "\" alt=\"").concat(parentsCG.male.name, "\" width=\"300\" height=\"200\"></td>\n            <td><img src=\"").concat(parentsCG.female.img, "\" alt=\"").concat(parentsCG.female.name, "\" width=\"300\" height=\"200\"></td>\n        </tr>\n        <tr>\n            <td>").concat(parentsCG.male.hair, "</td>\n            <td>").concat(parentsCG.female.hair, "</td>\n        </tr>\n        <tr>\n            <td>").concat(parentsCG.male.title, "</td>\n            <td>").concat(parentsCG.female.title, "</td>\n        </tr>\n    ");
-  return string;
-};
+var fillDivWithTables = function fillDivWithTables() {
+  var fillDiv = "";
 
-var fillChild = function fillChild() {
-  var string = '<tr><td>Imię</td><td>Obraz</td><td>Namaszczenie</td><td>Dostępność</td></tr>';
+  for (miot in allMiots) {
+    fillDiv += "<h3>".concat(allMiots[miot].name, "</h3><br><h4>Rodzice:</h4><br><table>");
+    fillDiv += "\n        <tr> \n            <th>Pies</th>\n            <th>Suka</th>\n        </tr>\n        <tr>\n            <td>".concat(allMiots[miot].parents.male.name, "</td>\n            <td>").concat(allMiots[miot].parents.female.name, "</td>\n        </tr>\n        <tr>\n            <td><img src=\"").concat(allMiots[miot].parents.male.img, "\" alt=\"").concat(allMiots[miot].parents.male.name, "\" width=\"300\" height=\"200\"></td>\n            <td><img src=\"").concat(allMiots[miot].parents.female.img, "\" alt=\"").concat(allMiots[miot].parents.female.name, "\" width=\"300\" height=\"200\"></td>\n        </tr>\n        <tr>\n            <td>").concat(allMiots[miot].parents.male.hair, "</td>\n            <td>").concat(allMiots[miot].parents.female.hair, "</td>\n        </tr>\n        <tr>\n            <td>").concat(allMiots[miot].parents.male.title, "</td>\n            <td>").concat(allMiots[miot].parents.female.title, "</td>\n        </tr></table><br><h4>Szczeniaki:</h4><br><table><tr><td>Imi\u0119</td><td>Obraz</td><td>Namaszczenie</td><td>Dost\u0119pno\u015B\u0107</td></tr>\n    ");
 
-  for (var puppy in puppyCG) {
-    string += "\n            <tr>\n                <td>".concat(puppyCG[puppy].name, "</td>\n                <td><img src=\"").concat(puppyCG[puppy].img, "\" alt=\"").concat(puppyCG[puppy].name, "\" width=\"300\" height=\"200\"></td>\n                <td>").concat(puppyCG[puppy].hair, "</td>\n                <td>").concat(puppyCG[puppy].sold, "</td>\n            </tr>\n        ");
+    for (var puppy in allMiots[miot].puppies) {
+      fillDiv += "\n        <tr>\n            <td>".concat(allMiots[miot].puppies[puppy].name, "</td>\n            <td><img src=\"").concat(allMiots[miot].puppies[puppy].img, "\" alt=\"").concat(allMiots[miot].puppies[puppy].name, "\" width=\"300\" height=\"200\"></td>\n            <td>").concat(allMiots[miot].puppies[puppy].hair, "</td>\n            <td>").concat(allMiots[miot].puppies[puppy].sold, "</td>\n        </tr>\n    ");
+    }
+
+    fillDiv += "</table><br><br>";
   }
 
-  return string;
+  table.innerHTML = fillDiv;
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  var stringParent = fillParent();
-  var stringChild = fillChild();
-  tableParents[0].innerHTML = stringParent;
-  tableChild[0].innerHTML = stringChild;
+  fillDivWithTables();
+  table.style.border = "none";
 });

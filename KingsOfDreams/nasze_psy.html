@@ -8,24 +8,39 @@
     </head>
     <body>
         <header>
-            Baner
+            <img src="./img/logo.png" alt="Logo" height="140px" width="250px">
         </header>
-
         <div>
             <container class="links">
                 <p><a href="./index.html">Strona Główna</a></p>
                 <p><a href="./rasy.html">Opis Ras</a></p>
                 <p><a href="./suki.html">Suki</a></p>
                 <p><a href="./psy.html">Psy</a></p>
-                <p><a href="./obecny_miot.html">Obecny Miot</a></p>
-                <p><a href="./nasze_psy.html">Nasze Psy</a></p>
+                <p><a href="./obecny_miot.html">Szczeniaki na sprzedarz</a></p>
+                <p><a href="./nasze_psy.html">Mioty</a></p>
+                <p><a href="./zapowiedz.html">Zapowiedz miotów</a></p>
                 <p><a href="./kontakt.html">Kontakt</a></p>
             </container>
             <container class="inside">
-                
+                <h1>Nasze Szczeniaki</h1>
+                <br>
+                <p>W naszej hodowli urodziło się wiele miotów. Pierwszym miotem był .... 
+                    Szczeniaki urodzone w naszej hodowli są otoczone troską oraz odpowiednią opieką weterynaryjną. Od pierwszych godzin życia stale obcują z ludźmi oraz innymi psami, dzięki czemu opuszczają hodowlę jako psy zrównoważone i wstępnie zsocjalizowane.
+                </p>
+                <br>
+                <p>
+                    Poniżej znajduje się lista miotów w kolejności ich urodzenia. Proszę wybrać miot z opcji znajdujących się poniżej.
+                </p>
+                <br>
+                <select id="miots" name="miots"></select>
+                <br>
+                <br>
+                <br>
+                <container class="inside2" id="table">
+                </container>
 
             </container>            
         </div>
-        
+        <script src="nasze_psy.js"></script>
     </body>
 </html>

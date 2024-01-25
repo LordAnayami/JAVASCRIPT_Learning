@@ -16,20 +16,6 @@ let allMiots = {
                 hair:"black",
                 title:"XX,YY,ZZ"
             }
-        },
-        puppies: {
-            puppy1:{
-                name:"XAX", 
-                img:"./img/Mignon.jpg",
-                hair:"white",
-                sold:"Sprzedany"
-            },
-            puppy2:{
-                name:"CAS", 
-                img:"./img/Sissi.jpg",
-                hair:"black",
-                sold:"Wolny"
-            }
         }
     },
     miot2: {
@@ -46,20 +32,6 @@ let allMiots = {
                 img:"./img/Sissi.jpg",
                 hair:"black",
                 title:"XX,YY,ZZ"
-            }
-        },
-        puppies: {
-            puppy1:{
-                name:"XAX2", 
-                img:"./img/Mignon.jpg",
-                hair:"white",
-                sold:"Sprzedany"
-            },
-            puppy2:{
-                name:"CAS2", 
-                img:"./img/Sissi.jpg",
-                hair:"black",
-                sold:"Wolny"
             }
         }
     }
@@ -91,20 +63,7 @@ const fillDivWithTables = () => {
         <tr>
             <td>${allMiots[miot].parents.male.title}</td>
             <td>${allMiots[miot].parents.female.title}</td>
-        </tr></table><br><h4>Szczeniaki:</h4><br><table><tr><td>Imię</td><td>Obraz</td><td>Namaszczenie</td><td>Dostępność</td></tr>
-    `
-
-    for (const puppy in allMiots[miot].puppies) {
-    fillDiv += `
-        <tr>
-            <td>${allMiots[miot].puppies[puppy].name}</td>
-            <td><img src="${allMiots[miot].puppies[puppy].img}" alt="${allMiots[miot].puppies[puppy].name}" width="300" height="200"></td>
-            <td>${allMiots[miot].puppies[puppy].hair}</td>
-            <td>${allMiots[miot].puppies[puppy].sold}</td>
-        </tr>
-    `; 
-    }   
-    fillDiv += "</table><br><br>"
+        </tr></table><br><br>`
     }
       
 table.innerHTML = fillDiv;

@@ -22,10 +22,12 @@ div{
     width: 10%;
     height: 100%; /* na przykład 100px, zamiast 100% */
     text-align: center;
-    border: solid 2px #000;
+    
     margin: auto; /* dodanie marginesu auto spowoduje wyśrodkowanie elementu w poziomie */
     display: flex; /* zmiana na display: flex, aby wyśrodkować tylko w poziomie */
     flex-direction: column; /* ustawienie flex-direction na column, aby elementy wyświetlały się jeden pod drugim */
+    outline: 2px solid black; /* Ustawienie obramowania */
+    outline-offset: 0px; /* Ustawienie odstępu, aby połączyć granice */
 }
 
 .links p {
@@ -36,10 +38,30 @@ div{
     height:100%;
     width:90%;
     align-items: center;
-    border:solid 2px #000;
+   
     text-align: center;
     padding: 20px;
     overflow: auto;
+    outline: 2px solid black; /* Ustawienie obramowania */
+    outline-offset: 0px; /* Ustawienie odstępu, aby połączyć granice */
+}
+
+.inside2{
+    height:100%;
+    width:90%;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: auto;
+    
+}
+
+header{
+    align-items: center;
+    overflow: auto;
+    text-align: center;
+    outline: 2px solid black; /* Ustawienie obramowania */
+    outline-offset: -2px; /* Ustawienie odstępu, aby połączyć granice */
 }
 
 table{
