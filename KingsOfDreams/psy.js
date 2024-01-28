@@ -1,34 +1,53 @@
-const tableParents = document.getElementsByClassName("table");
+const tableParents1 = document.getElementsByClassName("table1");
+const tableParents2 = document.getElementsByClassName("table2");
 
-const psy = {
+const psy1 = {
     s1:{
-        name:"Mignon", 
-        img:"./img/Mignon.jpg",
-        hair:"white",
-        birth:"XX.YY.ZZ",
-        title:"XX,YY,ZZ"
+        name:"MIGNON z Królestwa Motyli", 
+        img:"./img/psy/mignon.jpg",
+        birth:"2012-11-14",
+        title:"PLCH  PLJCH  BGCH  MNCH  CZCH  DCH(Club)  HCH  INTCH(FCI)  LUXCH  MKCH  MOLCH  RUSCH  SRBCH  UKRCH  Campionul Basarabiei, Champion of Kosova, Champion of the Balkans"
     },
     s2:{
-        name:"Sissi", 
+        name:"Lord Lary Kings Of Dreams", 
+        img:"./img/psy/lary.jpg",
+        birth:"2020-09-13",
+        title:"PLCH  PLJCH  MOLCH  SRBCH "  
+    },
+    s3:{
+        name:"Arpad Formidable De Maison Des Lys", 
         img:"./img/Sissi.jpg",
-        hair:"black",
-        birth:"XX.YY.ZZ",
-        title:"XX,YY,ZZ"
+        birth:"2021-02-12",
+        title:"PLCH  PLJCH  MOLCH"
+    },
+    s4:{
+        name:"Merci La Azzaro Kings Of Dreams", 
+        img:"./img/Sissi.jpg",
+        birth:"2022-02-27",
+        title:"PLCH  PLJCH MŁODZIEŻOWY INTCH(FCI)"
+    }    
+}
+
+const psy2 = {
+    s1:{
+        name:"SUNSET DREAM LAST MAN STANDING", 
+        img:"./img/Sissi.jpg",
+        birth:"2022-04-02",
+        title:""
     }
 }
 
 
 
-const fillTable = () => {
-    let string = '<tr><td>Imię</td><td>Obraz</td><td>Namaszczenie</td><td>Urodzenie</td><td>Tytuły</td></tr>';
-    for (const pies in psy) {
+const fillTable = (object) => {
+    let string = '<tr><td>Imię</td><td>Zdjęcie</td><td>Data Urodzenia</td><td>Tytuły</td></tr>';
+    for (const pies in object) {
         string += `
             <tr>
-                <td>${psy[pies].name}</td>
-                <td><img src="${psy[pies].img}" alt="${psy[pies].name}" width="300" height="200"></td>
-                <td>${psy[pies].hair}</td>
-                <td>${psy[pies].birth}</td>
-                <td>${psy[pies].sold}</td>
+                <td>${object[pies].name}</td>
+                <td><img id="zdjecia" src="${object[pies].img}" alt="${object[pies].name}" ></td>
+                <td>${object[pies].birth}</td>
+                <td>${object[pies].title}</td>
             </tr>
         `;
     }
@@ -38,6 +57,8 @@ const fillTable = () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const string = fillTable()
-    tableParents[0].innerHTML = string;
+    const string1 = fillTable(psy1)
+    tableParents1[0].innerHTML = string1;
+    const string2 = fillTable(psy2)
+    tableParents2[0].innerHTML = string2;
 });
