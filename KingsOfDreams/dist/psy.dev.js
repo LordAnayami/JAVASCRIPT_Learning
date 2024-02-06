@@ -17,13 +17,13 @@ var psy1 = {
   },
   s3: {
     name: "Arpad Formidable De Maison Des Lys",
-    img: "./img/Sissi.jpg",
+    img: "./img/psy/pieta.jpg",
     birth: "2021-02-12",
     title: "PLCH  PLJCH  MOLCH"
   },
   s4: {
     name: "Merci La Azzaro Kings Of Dreams",
-    img: "./img/Sissi.jpg",
+    img: "./img/psy/azaro.jpg",
     birth: "2022-02-27",
     title: "PLCH  PLJCH MŁODZIEŻOWY INTCH(FCI)"
   }
@@ -31,7 +31,7 @@ var psy1 = {
 var psy2 = {
   s1: {
     name: "SUNSET DREAM LAST MAN STANDING",
-    img: "./img/Sissi.jpg",
+    img: "./img/psy/oli.jpg",
     birth: "2022-04-02",
     title: ""
   }

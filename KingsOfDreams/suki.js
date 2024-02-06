@@ -10,38 +10,38 @@ const suki1 = {
         title:"PLCH  PLJCH  BGCH  MNCH  HCH  INTCH(FCI)  LUXCH  MKCH  MOLJCH  RUSCH  SRBCH  Campionul Junior Al Basarabiei, Champion of Kosova, Champion of the Balkans"
     },
     s2:{
-        name:"Charlotta Kings Of Dreams", 
-        img:"./img/suki/lary.jpg",
+        name:"CHARLOTTA Kings Of Dreams", 
+        img:"./img/suki/charlota.jpg",
         birth:"2018-05-28",
         title:"PLCH  PLJCH  BLRCH  BIHCH  INTCH(FCI)  MOLCH"  
     },
     s3:{
         name:"Lady Daisy Kings of Dreams", 
-        img:"./img/Sissi.jpg",
+        img:"./img/suki/daisy.jpg",
         birth:"2020-09-13",
         title:"PLCH  PLJCH  MOLCH"
     },
     s4:{
         name:"Lady Liliana Kings Of Dreams", 
-        img:"./img/Sissi.jpg",
+        img:"./img/suki/lili.jpg",
         birth:"2020-09-13",
         title:"PLCH  PLJCH  SRBCH"
     },
     s5:{
         name:"Merci La Blanca Kings Of Dreams", 
-        img:"./img/Sissi.jpg",
+        img:"./img/suki/blanka.jpg",
         birth:"2022-02-27",
         title:""
     },
     s6:{
         name:"Merci La Coco Chanel Kings Of Dreams", 
-        img:"./img/Sissi.jpg",
+        img:"./img/suki/koki.jpg",
         birth:"2022-02-27",
         title:"PLJCH  HSHCH"
     },
     s7:{
         name:"Black Nela Kings Of Dreams", 
-        img:"./img/Sissi.jpg",
+        img:"./img/suki/nela.jpg",
         birth:"2023-07-31",
         title:""
     }
@@ -50,7 +50,7 @@ const suki1 = {
 const suki2 = {
     s1:{
         name:"SUNSET DREAM KISS ME BLISS ME", 
-        img:"./img/Sissi.jpg",
+        img:"./img/suki/austr.jpg",
         birth:"2021-09-18",
         title:""
     }
