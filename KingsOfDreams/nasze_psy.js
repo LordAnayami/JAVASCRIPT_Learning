@@ -72,17 +72,17 @@ let allMiots = {
             },
             puppy2:{
                 name:"LORD DIEGO Kings of Dreams", 
-                img:"./img/szczeniaki/L2020CHG/cadiliana.jpg",
+                img:"./img/szczeniaki/L2020CHG/diego.jpg",
                 sold:"Sprzedany Szwecja"
             },
             puppy3:{
                 name:"LADY DAISY Kings of Dreams", 
-                img:"./img/suki/daisy.jpgz",
+                img:"./img/szczeniaki/L2020CHG/daisy.jpg",
                 sold:"Hodowla"
             },
             puppy4:{
                 name:"LADY LILIANA Kings of Dreams", 
-                img:"./img/suki/lili.jpg",
+                img:"./img/szczeniaki/L2020CHG/lili.jpg",
                 sold:"Hodowla"
             },
             puppy5:{
@@ -92,7 +92,7 @@ let allMiots = {
             },
             puppy6:{
                 name:"LADY DIANA Kings of Dreams", 
-                img:"./img/szczeniaki/L2020CHG/stella.jpg",
+                img:"./img/szczeniaki/L2020CHG/diana.jpg",
                 sold:"Sprzedana Wielka Brytania"
             }
         }

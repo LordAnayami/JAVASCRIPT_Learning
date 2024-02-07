@@ -58,7 +58,7 @@ var suki2 = {
 var suki3 = {
   s1: {
     name: "Maalum Uzuri Hypnosis Black Pearl",
-    img: "./img/Sissi.jpg",
+    img: "./img/suki/perla.jpg",
     birth: "2018-02-05",
     title: ""
   }
