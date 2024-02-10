@@ -23,22 +23,22 @@ let allMiots = {
             puppy1:{
                 name:"CARAT Kings of Dreams", 
                 img:"./img/szczeniaki/C2018CHG/carat.jpg",
-                sold:"Sprzedany Włochy"
+                sold:"Włochy"
             },
             puppy2:{
                 name:"CADILIANA Kings of Dreams", 
                 img:"./img/szczeniaki/C2018CHG/cadiliana.jpg",
-                sold:"Sprzedana Dania"
+                sold:"Dania"
             },
             puppy3:{
                 name:"COCO Kings of Dreams", 
                 img:"./img/szczeniaki/C2018CHG/coco.jpg",
-                sold:"Sprzedana USA"
+                sold:"USA"
             },
             puppy4:{
                 name:"CARMELA Kings of Dreams", 
                 img:"./img/szczeniaki/C2018CHG/carmela.jpg",
-                sold:"Sprzedana USA"
+                sold:"USA"
             },
             puppy5:{
                 name:"CHARLOTTA Kings of Dreams", 
@@ -73,7 +73,7 @@ let allMiots = {
             puppy2:{
                 name:"LORD DIEGO Kings of Dreams", 
                 img:"./img/szczeniaki/L2020CHG/diego.jpg",
-                sold:"Sprzedany Szwecja"
+                sold:"Szwecja"
             },
             puppy3:{
                 name:"LADY DAISY Kings of Dreams", 
@@ -88,12 +88,57 @@ let allMiots = {
             puppy5:{
                 name:"LADY STELLA Kings of Dreams", 
                 img:"./img/szczeniaki/L2020CHG/stella.jpg",
-                sold:"Sprzedana USA"
+                sold:"USA"
             },
             puppy6:{
                 name:"LADY DIANA Kings of Dreams", 
                 img:"./img/szczeniaki/L2020CHG/diana.jpg",
-                sold:"Sprzedana Wielka Brytania"
+                sold:"Wielka Brytania"
+            }
+        }
+    },
+    miot2020M: {
+        name: "2020 M Chinese Crested",
+        date:"2022-02-27",
+        parents: {
+            male:{
+                name:"Razem Czy Osobno Next Germanika", 
+                img:"./img/psy/razem.jpg",
+                birth:"2016-06-11",
+                title:"PLCH  BOG4"
+            },
+            female:{
+                name:"CHARLOTTA Kings of Dreams", 
+                img:"./img/suki/charlota.jpg",
+                birth:"2018-05-28",
+                title:"PLCH  PLJCH  BLRCH  BIHCH  INTCH(FCI)  MOLCH"
+            }
+        },
+        puppies: {
+            puppy1:{
+                name:"Merci La Azzaro Kings Of Dreams", 
+                img:"./img/psy/azaro.jpg",
+                sold:"Hodowla"
+            },
+            puppy2:{
+                name:"Merci La Armani Kings Of Dreams", 
+                img:"./img/szczeniaki/M2022CHG/armani.jpg",
+                sold:"Polska"
+            },
+            puppy3:{
+                name:"Merci La Dior Kings Of Dreams", 
+                img:"./img/szczeniaki/M2022CHG/dior.jpg",
+                sold:"Polska"
+            },
+            puppy4:{
+                name:"Merci La Coco Chanel Kings Of Dreams", 
+                img:"./img/suki/koki.jpg",
+                sold:"Hodowla"
+            },
+            puppy5:{
+                name:"Merci La Blanca Kings Of Dreams", 
+                img:"./img/szczeniaki/M2022CHG/blanka.jpg",
+                sold:"Hodowla"
             }
         }
     },
@@ -118,7 +163,7 @@ let allMiots = {
             puppy1:{
                 name:"Black Aron Kings of Dreams", 
                 img:"./img/szczeniaki/B2024CHG/aron.jpg",
-                sold:"Sprzedany Polska"
+                sold:"Polska"
             },
             puppy2:{
                 name:"Black Diego Kings of Dreams", 
@@ -148,12 +193,12 @@ let allMiots = {
             puppy7:{
                 name:"Black Angel Kings of Dreams", 
                 img:"./img/szczeniaki/B2024CHG/angel.jpg",
-                sold:"Sprzedana Czechy"
+                sold:"Czechy"
             },
             puppy8:{
                 name:"Black Rosa Kings of Dreams", 
                 img:"./img/szczeniaki/B2024CHG/rosa.jpg",
-                sold:"Sprzedana Polska"
+                sold:"Polska"
             }
         }
     }
