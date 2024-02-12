@@ -1,0 +1,28 @@
+body{
+    background-color:#6bca6b;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  .table-wrapper {
+      padding: 0 25px;
+      overflow-x: auto;
+    }
+    table{
+      margin:auto;
+      border:solid 2px #FFF;
+      width: calc(100% - 5px); /* Szerokość tabeli będzie równa 100% szerokości obiektu nadrzędnego minus 20px paddingu */
+      padding: 10px; /* Ustawienie paddingu dla tabeli */
+      position: relative;
+      border-collapse: collapse; /* Usunięcie odstępów między komórkami */
+      box-shadow: 5px 5px 5px #888888; /* Dodanie cienia */
+      border-radius: 10px; /* Zaokrąglenie krawędzi */
+    background-color:#f8b172
+  }
+  
+  th, td {
+      border: solid 1px #FFF;
+      text-align: center;
+      padding: 10px; /* Dodanie wewnętrznego marginesu */
+  }
