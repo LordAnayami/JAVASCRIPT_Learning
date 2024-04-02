@@ -84,7 +84,12 @@ th, td {
     max-height: 300px;
     width: auto;
     height: auto;
-  }
+}
+
+#zdjecia2 {
+    width: auto;
+    height: auto;
+}
 
 /* Ustawienie szerokości kolumn */
 th:nth-child(-n+3),
@@ -124,3 +129,4 @@ a:active {
 .theList > img {
     margin: 5px;
 }
+

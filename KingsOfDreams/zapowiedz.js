@@ -74,4 +74,3 @@ document.addEventListener('DOMContentLoaded', function() {
     fillDivWithTables();
     table.style.border = "none";
 });
-
