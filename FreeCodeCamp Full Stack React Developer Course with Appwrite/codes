@@ -14,3 +14,13 @@ content: [
 
 npm i
 pm create vite@latest  
+npm i appwrite
+
+npm install @reduxjs/toolkit
+npm install react-redux
+npm i react-router-dom
+
+
+npm install --save @tinymce/tinymce-react
+npm install react-hook-form
+npm i html-react-parser
