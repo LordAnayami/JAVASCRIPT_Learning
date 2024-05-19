@@ -4,201 +4,201 @@ const table = document.getElementById("table");
 let allMiots = {
     miot2018C: {
         name: "2018 C Chinese Crested",
-        date:"2018-05-28",
+        date: "2018-05-28",
         parents: {
-            male:{
-                name:"MIGNON z Królestwa Motyli", 
-                img:"./img/psy/mignon2.jpg",
-                birth:"2012-11-14",
-                title:"PLCH  PLJCH  BGCH  MNCH  CZCH  DCH(Club)  HCH  INTCH(FCI)  LUXCH  MKCH  MOLCH  RUSCH  SRBCH  UKRCH  Campionul Basarabiei, Champion of Kosova, Champion of the Balkans"
+            male: {
+                name: "MIGNON z Królestwa Motyli",
+                img: "./img/psy/mignon2.jpg",
+                birth: "2012-11-14",
+                title: "PLCH  PLJCH  BGCH  MNCH  CZCH  DCH(Club)  HCH  INTCH(FCI)  LUXCH  MKCH  MOLCH  RUSCH  SRBCH  UKRCH  Campionul Basarabiei, Champion of Kosova, Champion of the Balkans"
             },
-            female:{
-                name:"Falvara Sisi Milfra-Moravia", 
-                img:"./img/suki/sisi2.jpg",
-                birth:"2015-03-03",
-                title:"PLCH  PLJCH  BGCH  MNCH  HCH  INTCH(FCI)  LUXCH  MKCH  MOLJCH  RUSCH  SRBCH  Campionul Junior Al Basarabiei, Champion of Kosova, Champion of the Balkans"
+            female: {
+                name: "Falvara Sisi Milfra-Moravia",
+                img: "./img/suki/sisi2.jpg",
+                birth: "2015-03-03",
+                title: "PLCH  PLJCH  BGCH  MNCH  HCH  INTCH(FCI)  LUXCH  MKCH  MOLJCH  RUSCH  SRBCH  Campionul Junior Al Basarabiei, Champion of Kosova, Champion of the Balkans"
             }
         },
         puppies: {
-            puppy1:{
-                name:"CARAT Kings of Dreams", 
-                img:"./img/szczeniaki/C2018CHG/carat.jpg",
-                sold:"Włochy"
+            puppy1: {
+                name: "CARAT Kings of Dreams",
+                img: "./img/szczeniaki/C2018CHG/carat.jpg",
+                sold: "Włochy"
             },
-            puppy2:{
-                name:"CADILIANA Kings of Dreams", 
-                img:"./img/szczeniaki/C2018CHG/cadiliana.jpg",
-                sold:"Dania"
+            puppy2: {
+                name: "CADILIANA Kings of Dreams",
+                img: "./img/szczeniaki/C2018CHG/cadiliana.jpg",
+                sold: "Dania"
             },
-            puppy3:{
-                name:"COCO Kings of Dreams", 
-                img:"./img/szczeniaki/C2018CHG/coco.jpg",
-                sold:"USA"
+            puppy3: {
+                name: "COCO Kings of Dreams",
+                img: "./img/szczeniaki/C2018CHG/coco.jpg",
+                sold: "USA"
             },
-            puppy4:{
-                name:"CARMELA Kings of Dreams", 
-                img:"./img/szczeniaki/C2018CHG/carmela.jpg",
-                sold:"USA"
+            puppy4: {
+                name: "CARMELA Kings of Dreams",
+                img: "./img/szczeniaki/C2018CHG/carmela.jpg",
+                sold: "USA"
             },
-            puppy5:{
-                name:"CHARLOTTA Kings of Dreams", 
-                img:"./img/suki/charlota.jpg",
-                sold:"Hodowla"
+            puppy5: {
+                name: "CHARLOTTA Kings of Dreams",
+                img: "./img/suki/charlota.jpg",
+                sold: "Hodowla"
             }
         }
     },
     miot2020L: {
         name: "2020 L Chinese Crested",
-        date:"2020-09-13",
+        date: "2020-09-13",
         parents: {
-            male:{
-                name:"MIGNON z Królestwa Motyli", 
-                img:"./img/psy/mignon3.jpg",
-                birth:"2012-11-14",
-                title:"PLCH  PLJCH  BGCH  MNCH  CZCH  DCH(Club)  HCH  INTCH(FCI)  LUXCH  MKCH  MOLCH  RUSCH  SRBCH  UKRCH  Campionul Basarabiei, Champion of Kosova, Champion of the Balkans"
+            male: {
+                name: "MIGNON z Królestwa Motyli",
+                img: "./img/psy/mignon3.jpg",
+                birth: "2012-11-14",
+                title: "PLCH  PLJCH  BGCH  MNCH  CZCH  DCH(Club)  HCH  INTCH(FCI)  LUXCH  MKCH  MOLCH  RUSCH  SRBCH  UKRCH  Campionul Basarabiei, Champion of Kosova, Champion of the Balkans"
             },
-            female:{
-                name:"Falvara Sisi Milfra-Moravia", 
-                img:"./img/suki/sisi3.jpg",
-                birth:"2015-03-03",
-                title:"PLCH  PLJCH  BGCH  MNCH  HCH  INTCH(FCI)  LUXCH  MKCH  MOLJCH  RUSCH  SRBCH  Campionul Junior Al Basarabiei, Champion of Kosova, Champion of the Balkans"
+            female: {
+                name: "Falvara Sisi Milfra-Moravia",
+                img: "./img/suki/sisi3.jpg",
+                birth: "2015-03-03",
+                title: "PLCH  PLJCH  BGCH  MNCH  HCH  INTCH(FCI)  LUXCH  MKCH  MOLJCH  RUSCH  SRBCH  Campionul Junior Al Basarabiei, Champion of Kosova, Champion of the Balkans"
             }
         },
         puppies: {
-            puppy1:{
-                name:"LORD LARY Kings of Dreams", 
-                img:"./img/psy/lary.jpg",
-                sold:"Hodowla"
+            puppy1: {
+                name: "LORD LARY Kings of Dreams",
+                img: "./img/psy/lary.jpg",
+                sold: "Hodowla"
             },
-            puppy2:{
-                name:"LORD DIEGO Kings of Dreams", 
-                img:"./img/szczeniaki/L2020CHG/diego.jpg",
-                sold:"Szwecja"
+            puppy2: {
+                name: "LORD DIEGO Kings of Dreams",
+                img: "./img/szczeniaki/L2020CHG/diego.jpg",
+                sold: "Szwecja"
             },
-            puppy3:{
-                name:"LADY DAISY Kings of Dreams", 
-                img:"./img/szczeniaki/L2020CHG/daisy.jpg",
-                sold:"Hodowla"
+            puppy3: {
+                name: "LADY DAISY Kings of Dreams",
+                img: "./img/szczeniaki/L2020CHG/daisy.jpg",
+                sold: "Hodowla"
             },
-            puppy4:{
-                name:"LADY LILIANA Kings of Dreams", 
-                img:"./img/szczeniaki/L2020CHG/lili.jpg",
-                sold:"Hodowla"
+            puppy4: {
+                name: "LADY LILIANA Kings of Dreams",
+                img: "./img/szczeniaki/L2020CHG/lili.jpg",
+                sold: "Hodowla"
             },
-            puppy5:{
-                name:"LADY STELLA Kings of Dreams", 
-                img:"./img/szczeniaki/L2020CHG/stella.jpg",
-                sold:"USA"
+            puppy5: {
+                name: "LADY STELLA Kings of Dreams",
+                img: "./img/szczeniaki/L2020CHG/stella.jpg",
+                sold: "Wielka Brytania"
             },
-            puppy6:{
-                name:"LADY DIANA Kings of Dreams", 
-                img:"./img/szczeniaki/L2020CHG/diana.jpg",
-                sold:"Wielka Brytania"
+            puppy6: {
+                name: "LADY DIANA Kings of Dreams",
+                img: "./img/szczeniaki/L2020CHG/diana.jpg",
+                sold: "Wielka Brytania"
             }
         }
     },
     miot2020M: {
         name: "2020 M Chinese Crested",
-        date:"2022-02-27",
+        date: "2022-02-27",
         parents: {
-            male:{
-                name:"Razem Czy Osobno Next Germanika", 
-                img:"./img/psy/razem.jpg",
-                birth:"2016-06-11",
-                title:"PLCH  BOG4"
+            male: {
+                name: "Razem Czy Osobno Next Germanika",
+                img: "./img/psy/razem.jpg",
+                birth: "2016-06-11",
+                title: "PLCH  BOG4"
             },
-            female:{
-                name:"CHARLOTTA Kings of Dreams", 
-                img:"./img/suki/charlota.jpg",
-                birth:"2018-05-28",
-                title:"PLCH  PLJCH  BLRCH  BIHCH  INTCH(FCI)  MOLCH"
+            female: {
+                name: "CHARLOTTA Kings of Dreams",
+                img: "./img/suki/charlota.jpg",
+                birth: "2018-05-28",
+                title: "PLCH  PLJCH  BLRCH  BIHCH  INTCH(FCI)  MOLCH"
             }
         },
         puppies: {
-            puppy1:{
-                name:"Merci La Azzaro Kings Of Dreams", 
-                img:"./img/psy/azaro.jpg",
-                sold:"Hodowla"
+            puppy1: {
+                name: "Merci La Azzaro Kings Of Dreams",
+                img: "./img/psy/azaro.jpg",
+                sold: "Hodowla"
             },
-            puppy2:{
-                name:"Merci La Armani Kings Of Dreams", 
-                img:"./img/szczeniaki/M2022CHG/armani.jpg",
-                sold:"Polska"
+            puppy2: {
+                name: "Merci La Armani Kings Of Dreams",
+                img: "./img/szczeniaki/M2022CHG/armani.jpg",
+                sold: "Polska"
             },
-            puppy3:{
-                name:"Merci La Dior Kings Of Dreams", 
-                img:"./img/szczeniaki/M2022CHG/dior.jpg",
-                sold:"Polska"
+            puppy3: {
+                name: "Merci La Dior Kings Of Dreams",
+                img: "./img/szczeniaki/M2022CHG/dior.jpg",
+                sold: "Polska"
             },
-            puppy4:{
-                name:"Merci La Coco Chanel Kings Of Dreams", 
-                img:"./img/suki/koki.jpg",
-                sold:"Hodowla"
+            puppy4: {
+                name: "Merci La Coco Chanel Kings Of Dreams",
+                img: "./img/suki/koki.jpg",
+                sold: "Hodowla"
             },
-            puppy5:{
-                name:"Merci La Blanca Kings Of Dreams", 
-                img:"./img/szczeniaki/M2022CHG/blanka.jpg",
-                sold:"Hodowla"
+            puppy5: {
+                name: "Merci La Blanca Kings Of Dreams",
+                img: "./img/szczeniaki/M2022CHG/blanka.jpg",
+                sold: "Hodowla"
             }
         }
     },
     miot203B: {
         name: "2023 B Chinese Crested",
-        date:"2023-07-31",
+        date: "2023-07-31",
         parents: {
-            male:{
-                name:"Arpad Formidable De Maison Des Lys", 
-                img:"./img/psy/pieta.jpg",
-                birth:"2021-02-12",
-                title:"PLCH  PLJCH  MOLCH"
+            male: {
+                name: "Arpad Formidable De Maison Des Lys",
+                img: "./img/psy/pieta.jpg",
+                birth: "2021-02-12",
+                title: "PLCH  PLJCH  MOLCH"
             },
-            female:{
-                name:"Charlotta Kings Of Dreams", 
-                img:"./img/suki/charlota.jpg",
-                birth:"2018-05-28",
-                title:"PLCH  PLJCH  BLRCH  BIHCH  INTCH(FCI)  MOLCH"
+            female: {
+                name: "Charlotta Kings Of Dreams",
+                img: "./img/suki/charlota.jpg",
+                birth: "2018-05-28",
+                title: "PLCH  PLJCH  BLRCH  BIHCH  INTCH(FCI)  MOLCH"
             }
         },
         puppies: {
-            puppy1:{
-                name:"Black Aron Kings of Dreams", 
-                img:"./img/szczeniaki/B2024CHG/aron.jpg",
-                sold:"Polska"
+            puppy1: {
+                name: "Black Aron Kings of Dreams",
+                img: "./img/szczeniaki/B2024CHG/aron.jpg",
+                sold: "Polska"
             },
-            puppy2:{
-                name:"Black Diego Kings of Dreams", 
-                img:"./img/szczeniaki/B2024CHG/diego.jpg",
-                sold:"Wolny"
+            puppy2: {
+                name: "Black Diego Kings of Dreams",
+                img: "./img/szczeniaki/B2024CHG/diego.jpg",
+                sold: "Polska"
             },
-            puppy3:{
-                name:"Black Boss Kings of Dreams", 
-                img:"./img/szczeniaki/B2024CHG/boss.jpg",
-                sold:"Wolny"
+            puppy3: {
+                name: "Black Boss Kings of Dreams",
+                img: "./img/szczeniaki/B2024CHG/boss.jpg",
+                sold: "Wolny"
             },
-            puppy4:{
-                name:"Black Nela Kings of Dreams", 
-                img:"./img/suki/nela.jpg",
-                sold:"Hodowla"
+            puppy4: {
+                name: "Black Nela Kings of Dreams",
+                img: "./img/suki/nela.jpg",
+                sold: "Hodowla"
             },
-            puppy5:{
-                name:"Black Scarlet Kings of Dreams", 
-                img:"./img/szczeniaki/B2024CHG/scarlet.jpg",
-                sold:"Wolna"
+            puppy5: {
+                name: "Black Scarlet Kings of Dreams",
+                img: "./img/szczeniaki/B2024CHG/scarlet.jpg",
+                sold: "Wolna"
             },
-            puppy6:{
-                name:"Black Perla Kings of Dreams", 
-                img:"./img/szczeniaki/B2024CHG/perla.jpg",
-                sold:"Wolna"
+            puppy6: {
+                name: "Black Perla Kings of Dreams",
+                img: "./img/szczeniaki/B2024CHG/perla.jpg",
+                sold: "Wolna"
             },
-            puppy7:{
-                name:"Black Angel Kings of Dreams", 
-                img:"./img/szczeniaki/B2024CHG/angel.jpg",
-                sold:"Czechy"
+            puppy7: {
+                name: "Black Angel Kings of Dreams",
+                img: "./img/szczeniaki/B2024CHG/angel.jpg",
+                sold: "Czechy"
             },
-            puppy8:{
-                name:"Black Rosa Kings of Dreams", 
-                img:"./img/szczeniaki/B2024CHG/rosa.jpg",
-                sold:"Polska"
+            puppy8: {
+                name: "Black Rosa Kings of Dreams",
+                img: "./img/szczeniaki/B2024CHG/rosa.jpg",
+                sold: "Polska"
             }
         }
     }
@@ -206,18 +206,18 @@ let allMiots = {
 
 const fillOptions = () => {
     let listOptions = `<option value="">(Wybierz miot)</option>`;
-    for (const miot in allMiots){
+    for (const miot in allMiots) {
         listOptions += `<option value="${miot}">${allMiots[miot].name}</option>`;
     }
-    return listOptions; 
+    return listOptions;
 }
 
 const fillDivWithTables = (opcja) => {
 
     let fillDiv = "";
-    
-        fillDiv += `<h3>${allMiots[opcja].name}</h3><br><h3>${allMiots[opcja].date}</h3><br><h4>Rodzice:</h4><br><table>`;
-        fillDiv += `
+
+    fillDiv += `<h3>${allMiots[opcja].name}</h3><br><h3>${allMiots[opcja].date}</h3><br><h4>Rodzice:</h4><br><table>`;
+    fillDiv += `
         <tr> 
             <th>Pies</th>
             <th>Suka</th>
@@ -241,21 +241,21 @@ const fillDivWithTables = (opcja) => {
     `
 
     for (const puppy in allMiots[opcja].puppies) {
-    fillDiv += `
+        fillDiv += `
         <tr>
             <td>${allMiots[opcja].puppies[puppy].name}</td>
             <td><img id="zdjecia" src="${allMiots[opcja].puppies[puppy].img}" alt="${allMiots[opcja].puppies[puppy].name}" width="300" height="200"></td>
             <td>${allMiots[opcja].puppies[puppy].sold}</td>
         </tr>
-    `; 
-    }   
+    `;
+    }
     fillDiv += "</table><br><br>"
-    
-      
-table.innerHTML = fillDiv;
+
+
+    table.innerHTML = fillDiv;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const listOptions = fillOptions();
     chooseOptions.innerHTML = listOptions;
     table.style.border = "none";
