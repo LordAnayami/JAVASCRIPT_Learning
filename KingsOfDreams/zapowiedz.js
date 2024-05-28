@@ -1,37 +1,37 @@
 const table = document.getElementById("table");
 
-let allMiots = {
+let allMiots1 = {
     miot1: {
         name: "2010 A Chinese Crested",
         parents: {
-            male:{
-                name:"Mignon", 
-                img:"./img/Mignon.jpg",
-                hair:"white",
-                title:"XX,YY,ZZ"
+            male: {
+                name: "Mignon",
+                img: "./img/Mignon.jpg",
+                hair: "white",
+                title: "XX,YY,ZZ"
             },
-            female:{
-                name:"Sissi", 
-                img:"./img/Sissi.jpg",
-                hair:"black",
-                title:"XX,YY,ZZ"
+            female: {
+                name: "Sissi",
+                img: "./img/Sissi.jpg",
+                hair: "black",
+                title: "XX,YY,ZZ"
             }
         }
     },
     miot2: {
         name: "2011 B Chinese Crested",
         parents: {
-            male:{
-                name:"Mignon2", 
-                img:"./img/Mignon.jpg",
-                hair:"white",
-                title:"XX,YY,ZZ"
+            male: {
+                name: "Mignon2",
+                img: "./img/Mignon.jpg",
+                hair: "white",
+                title: "XX,YY,ZZ"
             },
-            female:{
-                name:"Sissi2", 
-                img:"./img/Sissi.jpg",
-                hair:"black",
-                title:"XX,YY,ZZ"
+            female: {
+                name: "Sissi2",
+                img: "./img/Sissi.jpg",
+                hair: "black",
+                title: "XX,YY,ZZ"
             }
         }
     }
@@ -39,9 +39,9 @@ let allMiots = {
 
 
 const fillDivWithTables = () => {
-    if (allMiots !== ""){
+    if (allMiots !== "") {
         let fillDiv = "";
-        for (miot in allMiots){
+        for (miot in allMiots) {
             fillDiv += `<h3>${allMiots[miot].name}</h3><br><h4>Rodzice:</h4><br><table>`;
             fillDiv += `
             <tr> 
@@ -65,12 +65,12 @@ const fillDivWithTables = () => {
                 <td>${allMiots[miot].parents.female.title}</td>
             </tr></table><br><br>`
         }
-          
-    table.innerHTML = fillDiv;
-    }else table.innerHTML = "<p>Brak planowanych miotów.</p>"
+
+        table.innerHTML = fillDiv;
+    } else table.innerHTML = "<p>Brak planowanych miotów.</p>"
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     fillDivWithTables();
     table.style.border = "none";
 });

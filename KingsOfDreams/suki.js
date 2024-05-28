@@ -52,7 +52,7 @@ const suki2 = {
         name: "SUNSET DREAM KISS ME BLISS ME",
         img: "./img/suki/austr.jpg",
         birth: "2021-09-18",
-        title: ""
+        title: "Światowa Wystawa w Chorwacji lok. 4"
     }
 }
 
