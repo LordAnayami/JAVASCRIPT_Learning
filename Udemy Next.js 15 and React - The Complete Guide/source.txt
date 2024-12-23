@@ -4,3 +4,9 @@ https://www.udemy.com/course/nextjs-react-the-complete-guide/learn/lecture/41160
 npx create-next-app@latest
 npm install react-icons
 npm install react-router-dom
+
+
+npx create-next-app@latest
+npm install better-sqlite3
+npm install slugify xss
+                                  
