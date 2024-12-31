@@ -11,3 +11,4 @@ npm install better-sqlite3
 npm install slugify xss
 npm install lucia @lucia-auth/adapter-sqlite              
 npm install swr
+npm install mongodb
