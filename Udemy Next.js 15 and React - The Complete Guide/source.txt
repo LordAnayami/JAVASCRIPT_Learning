@@ -12,3 +12,6 @@ npm install slugify xss
 npm install lucia @lucia-auth/adapter-sqlite              
 npm install swr
 npm install mongodb
+npm install react-markdown
+npm install gray-matter
+npm install react-syntax-highlighter
