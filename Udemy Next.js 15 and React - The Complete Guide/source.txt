@@ -15,3 +15,5 @@ npm install mongodb
 npm install react-markdown
 npm install gray-matter
 npm install react-syntax-highlighter
+npm install next-auth@3
+npm install bcryptjs
