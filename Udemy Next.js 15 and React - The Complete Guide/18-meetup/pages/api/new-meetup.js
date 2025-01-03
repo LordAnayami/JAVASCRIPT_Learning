@@ -2,28 +2,27 @@ import { MongoClient } from "mongodb";
 
 async function handler(req, res) {
   if (req.method === "POST") {
-    const { email, name, message } = req.body;
+    const data = req.body;
+    const { title, image, address, description } = data;
 
     if (
-      !email ||
-      !email.includes("@") ||
-      !name ||
-      name.trim() === "" ||
-      !message ||
-      message.trim() === ""
+      title.length === 0 ||
+      image.length === 0 ||
+      address.length === 0 ||
+      description.length === 0
     ) {
       res.status(422).json({ message: "Invalid input." });
       return;
     }
 
-    const newMessage = {
-      email,
-      name,
-      message,
+    const newMeetings = {
+      title,
+      image,
+      address,
+      description,
     };
 
     let client;
-
     const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.bg1k4.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
 
     try {
@@ -36,19 +35,20 @@ async function handler(req, res) {
     const db = client.db();
 
     try {
-      const result = await db.collection("messages").insertOne(newMessage);
-      newMessage.id = result.insertedId;
+      const result = await db.collection("meetings").insertOne(newMeetings);
+      newMeetings.id = result.insertedId;
     } catch (error) {
       client.close();
-      res.status(500).json({ message: "Storing message failed!" });
+      res.status(500).json({ message: "Storing meeting failed!" });
       return;
     }
 
     client.close();
 
-    res
-      .status(201)
-      .json({ message: "Successfully stored message!", message: newMessage });
+    res.status(201).json({
+      message: "Successfully stored meeting!",
+      data: newMeetings,
+    });
   }
 }
 
