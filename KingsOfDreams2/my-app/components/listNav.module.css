@@ -1,0 +1,24 @@
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-size: 1.25rem;
+  flex-direction: column; /* Ustawia elementy w kolumnie */
+  gap: 10px;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+  color: black;
+  flex-direction: column;
+  outline-offset: 0px; /* Ustawienie odstępu, aby połączyć granice */
+}

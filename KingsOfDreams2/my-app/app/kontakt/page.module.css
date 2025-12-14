@@ -1,0 +1,9 @@
+.inside {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  color: black;
+  flex-direction: column;
+  outline-offset: 0px; /* Ustawienie odstępu, aby połączyć granice */
+}

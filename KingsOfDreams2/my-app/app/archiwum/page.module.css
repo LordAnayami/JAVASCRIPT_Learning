@@ -1,0 +1,21 @@
+.inside {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+  color: black;
+  flex-direction: column;
+  outline: 2px solid black; /* Ustawienie obramowania */
+  outline-offset: 0px; /* Ustawienie odstępu, aby połączyć granice */
+}
+
+.theList {
+  align-items: center;
+  text-align: center;
+  border: none !important;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}

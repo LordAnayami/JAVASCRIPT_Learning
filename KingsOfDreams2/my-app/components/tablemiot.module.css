@@ -1,0 +1,65 @@
+
+.inside2 {
+  height: 100%;
+  width: 90%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+  border: black;
+}
+
+.gridTable {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: none;
+  width: 100%;
+  table-layout: auto;
+}
+.borderTbody {
+  box-shadow: 5px 5px 5px #888888; /* Dodanie cienia */
+  border-radius: 10px; /* Zaokrąglenie krawędzi */
+  border-collapse: collapse;
+}
+.newdiv {
+  border: none;
+  width: 100%;
+}
+.border {
+  border-color: bisque !important;
+}
+
+.tdmax {
+  max-width: 400px;
+}
+
+.wideColumn {
+  min-width: fit-content;
+  padding: 10px; /* trochę więcej miejsca */
+  flex-grow: 1;
+  border: 2px solid black;
+}
+.th,
+.td {
+  border: 2px solid black; /* Krawędzie dla komórek */
+  padding: 10px;
+  text-align: center;
+}
+
+.p {
+  width: 90%;
+  box-sizing: border-box; /* aby padding i border były wliczane w szerokość */
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.zdjecia2 {
+  max-width: 300px !important;
+  max-height: 200px !important;
+  object-fit: contain;
+  margin: 0px 10px !important;
+}

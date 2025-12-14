@@ -1,0 +1,18 @@
+.inside {
+  width: 98%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+  color: black;
+  flex-direction: column;
+  outline: 2px solid black; /* Ustawienie obramowania */
+  outline-offset: 0px; /* Ustawienie odstępu, aby połączyć granice */
+  flex-direction: column;
+}
+
+.p {
+  width: 100%; /* lub inna wartość, np. 300px */
+}

@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: aquamarine;
+}
+
+.header {
+  text-align: center;
+  background-color: #cbc3e3;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 250px); /* Dopasuj wysokość zależnie od headera */
+}
+
+.sidebar {
+  width: 20 0px; /* Możesz zmienić szerokość według potrzeb */
+  background-color: #eaeaea;
+  padding: 20px;
+}
+
+.content {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.inside {
+  height: 100%;
+  width: 90%;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+  outline: 2px solid black; /* Ustawienie obramowania */
+  outline-offset: 0px; /* Ustawienie odstępu, aby połączyć granice */
+}

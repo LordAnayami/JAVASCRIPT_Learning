@@ -1,0 +1,13 @@
+.zdjecia2 {
+  max-width: 400px !important;
+  max-height: 300px !important;
+  object-fit: contain;
+  margin: 0px 10px !important;
+}
+
+.zdjecia {
+  max-width: 500px !important;
+  max-height: 500px !important;
+  object-fit: contain;
+  margin: 0px 10px !important;
+}
